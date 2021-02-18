@@ -2,8 +2,8 @@
 bienvenida="Bienvenido, en este programa compararemos dos años"
 pregunta_añoactual= "¿En que año estamos?: "
 pregunta_añoazar= "Di otro año, no importa si ya paso o aun no: "
-mensaje_añopasado= "Los años que han pasado desde ese año hasta este son: "
-mensaje_añofuruto= "Los años que faltan para llegar hasta ese año son: "
+mensaje_añopasado= "Los años que han pasado desde ese año hasta este son:"
+mensaje_añofuruto= "Los años que faltan para llegar hasta ese año son:"
 mensaje_añosiguales= "Los años que ingresaste son los mismos, asi que no ha pasado ningun año"
 despedida="Espero hayas disfrutado del programa"
 
@@ -18,12 +18,12 @@ resultado=""
 
 #condicional
 if (isAño_pasado):
-    resultado=mensaje_añopasado
+    print(mensaje_añopasado, dif_años)
+    
 elif (isAño_futuro):
-    resultado=mensaje_añofuruto
     dif_años= dif_años*(-1)
+    print(mensaje_añofuruto, dif_años)
 else:
-    resultado=mensaje_añosiguales
+    print(mensaje_añosiguales)
 
-print(resultado, dif_años)
 print(despedida)

@@ -1,32 +1,26 @@
 #constantes
-bienvenida="Bienvenido, en este programa convertiremos de cm a m y km"
+bienvenida="Bienvenido, en este programa convertiremos de cm a km, m o mm"
 pregunta_distancia= "Ingrese una distancia en cm: "
 mensaje_distancia="Las distancia es:"
-pregunta_km="¿Quieres pasarla a km?: "
-pregunta_m="¿Quieres pasarla a m?: "
+pregunta_unidad="¿A que unidad desea pasar la distancia? ¿km, m o mm?: "
 despedida="Espero hayas disfrutado el programa"
 
 #distancia
 print(bienvenida)
 distancia=float(input(pregunta_distancia))
-resp_km=input(pregunta_km)
-resp_m=input(pregunta_m)
-isRespKm= resp_km=="si" or resp_km=="SI" or resp_km=="Si"
-isRespm= resp_m=="si" or resp_km=="SI" or resp_km=="Si"
+resp_unidad=input(pregunta_unidad)
 
 #condicionales
-if(isRespKm and isRespm):
+if(resp_unidad=="km"):
     distancia= distancia/100000
     print(mensaje_distancia, distancia, "km")
-    distancia= distancia*1000
-    print(mensaje_distancia, distancia, "m")
-elif(isRespKm):
-    distancia= distancia/100000
-    print(mensaje_distancia, distancia, "km")
-elif(isRespm):
+elif(resp_unidad=="m"):
     distancia= distancia/100
     print(mensaje_distancia, distancia, "m")
+elif(resp_unidad=="mm"):
+    distancia= distancia*10
+    print(mensaje_distancia, distancia, "mm")
 else:
-    print(mensaje_distancia, distancia, "cm")
+    print("Caracter no valido")
 
 print(despedida)
