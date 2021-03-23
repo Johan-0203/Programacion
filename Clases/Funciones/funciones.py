@@ -1,9 +1,17 @@
 #----------Sumar dos números -----------#
 def sumar (a = 0, b = 0):
+    '''
+        devuelve la suma de dos numeros a y b
+        por defecto a y b valen 0
+    '''
     suma = a + b
     return suma
 #----------Restar dos números -----------#
 def restar (a = 0, b = 0):
+    '''
+        devuelve la resta de dos numeros a y b
+        por defecto a y b valen 0
+    '''
     resta = a - b
     return resta
 #----------Multiplicar dos números -----------#
