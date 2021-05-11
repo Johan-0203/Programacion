@@ -60,10 +60,11 @@ plt.savefig('tortaCiudadesFav.png')
 plt.show()
 
 #Punto 3
-print('''Un electrocardiograma (EKG, por sus siglas en inglés) le mide la actividad del corazón.
+print('''------------------------------------------
+Un electrocardiograma (EKG, por sus siglas en inglés) le mide la actividad del corazón.
 En una prueba de esfuerzo durante el ejercicio,
- tiene un ECG mientras camina o trota en una caminadora (treadmill)
-''')
+tiene un ECG mientras camina o trota en una caminadora (treadmill)
+------------------------------------------''')
 ecgData = pd.read_csv('ecg.csv',encoding='UTF-8',header=0,delimiter=';').to_dict()
 muestras = list(ecgData['muestra'].values())
 valores = list(ecgData['valor'].values())
@@ -72,11 +73,16 @@ plt.plot(muestras,valores)
 plt.title('Grafico Sensor Vs Tiempo')
 plt.xlabel('Tiempo(s)')
 plt.ylabel('Voltaje(mV)')
-plt.savefig('Sensor.png')
+plt.savefig('ECG.png')
 #-----------------
 plt.show()
 
-
+print('''------------------------------------------
+Un fotopletismograma ( PPG ) es un pletismograma obtenido ópticamente
+que se puede utilizar para detectar cambios en el volumen de sangre en el lecho de tejido microvascular
+. Un PPG a menudo se obtiene mediante el uso de un oxímetro de pulso
+que ilumina la piel y mide los cambios en la absorción de la luz
+------------------------------------------''')
 ppgData = pd.read_csv('ppg.csv',encoding='UTF-8',header=0,delimiter=';').to_dict()
 muestras = list(ppgData['muestra'].values())
 valores = list(ppgData['valor'].values())
@@ -85,6 +91,6 @@ plt.plot(muestras,valores)
 plt.title('Grafico Sensor Vs Tiempo')
 plt.xlabel('Tiempo(s)')
 plt.ylabel('Voltaje(mV)')
-plt.savefig('Sensor.png')
+plt.savefig('PPG.png')
 #-----------------
 plt.show()
