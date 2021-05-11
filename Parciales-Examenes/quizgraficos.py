@@ -52,7 +52,10 @@ def etiquetarElementosPorcentuales(sizes, labels, indicador= ' ->'):
         ciudades[i] += indicador+str(round(sizes[i]/acumulador*100,2)) +'%'
 
 etiquetarElementosPorcentuales(sizes, ciudades , '-')
-plt.pie(sizes,labels=ciudades,shadow=1,counterclock=1)
+maximo = poblacion.index(max(poblacion))
+pieExplode=[0,0,0,0,0]
+pieExplode[maximo]=0.2
+plt.pie(sizes,labels=ciudades,explode=pieExplode,shadow=1,counterclock=1)
 #----------------------------
 plt.title('Ciudades favoritas')
 plt.savefig('tortaCiudadesFav.png')
