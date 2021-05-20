@@ -1,0 +1,5 @@
+archivo de nombre datos estudiantes
+nombre: Johan, edad: 18, estatura: 1.77
+nombre: Daniel, edad: 19, estatura: 1.74
+nombre: Samuel, edad: 18, estatura: 1.74
+nombre: Yo, edad: 50, estatura: 2.3
