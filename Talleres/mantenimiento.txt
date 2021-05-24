@@ -1,0 +1,3 @@
+archivo de manejo de los clientes
+nombre del equipo: ascd, descripcion: agr, precio del mantenimiento: 8000
+nombre del equipo: ads, descripcion: casd, precio del mantenimiento: 51

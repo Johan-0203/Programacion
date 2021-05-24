@@ -42,5 +42,27 @@ correo='ESPERO ESTES BIEN'
 print(correo.casefold().capitalize())
 saludo='Hola como estas?'
 nombre='Maria Alejandra'
+nombre = 'maria alejandra'
+nombres = nombre.split(' ')
+nombre= ''
+for elemento in nombres:
+    nombre += elemento.capitalize() +' '
+print(nombre)
 print(saludo.center(50))
-print(saludo)
+print(nombre.center(50))
+
+enunciado = 'Hola hola ya me cansé de decir tantos Hola pero como vamos hola'
+print (enunciado.upper().count('HOLA'))
+
+print (enunciado.find('decir'))
+print (enunciado[25:30])
+
+txt = 'me gusta programar en java'
+print (txt.replace('java', 'python'))
+
+numeroId = '123124'
+print(numeroId.isnumeric())
+
+parrafo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis hic libero quos, aliquam nostrum officia! Unde, magnam ex? Vel aliquid ducimus aliquam error quod rem ut quos animi numquam.'
+
+print (parrafo.endswith('.'))
